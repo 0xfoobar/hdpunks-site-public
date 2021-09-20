@@ -1,0 +1,107 @@
+.jumbotron {
+  /* padding-top: 3rem;
+  padding-bottom: 3rem; */
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    /* padding-top: 6rem;
+    padding-bottom: 6rem; */
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  /* max-width: 40rem; */
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+/* My changes */
+
+.container-detail {
+  width: 200px;
+  background-color: yellow;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+}
+
+.punkbackground {
+  background-color: lightblue;
+}
+
+.punkbackground:hover {
+  cursor: pointer;
+  /* background-color: deepskyblue; */
+  background-color: #8ac4d6;
+}
+
+.modal-dialog {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.rightalign {
+  flex-direction: row-reverse;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.jumbotron {
+  padding: 1rem;
+}
+
+.recent-mints {
+  height: 75px;
+}
+
+body {
+  background-color: black;
+}
+
+main {
+  color: white;
+  font-family: muli, sans-serif;
+}
+
+.banner {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.about-text {
+  width: 80%;
+}
+
+.card-body {
+  color: black;
+}
+
+.container-info {
+  padding: 2%;
+}
+
+#searchHdPunkImage {
+  max-width: 100%;
+}

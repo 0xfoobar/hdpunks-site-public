@@ -1,0 +1,1 @@
+var rum=function(){function t(t){if(t&&32===t.trim().length){var n=["www.atmrum.net/conf/v1/atm/fpconfig.min.json"],m=document.createElement("script");m.src="//www.atmrum.net/client/v1/atm/fpv2.min.js",m.onload=function(){Footprint.start("atm",n,5,t)},document.body.appendChild(m)}}return{start:t}}();

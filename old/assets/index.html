@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HD Punks</title>
+
+    <link rel="canonical" href="https://hdpunks.com">
+    <link rel="shortcut icon" type="image/jpg" href="http://hdpunks.com/images/tablogo.png">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="name meta description">
+    <meta name="author" content="@foobar">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@0xfoobar" />
+    <meta name="twitter:title" content="HD Punks" />
+    <meta name="twitter:description" content="Mint the HD version of any punks you own!" />
+    <meta name="twitter:image" content="http://hdpunks.com/images/2484.png" />
+
+    <meta property="og:url" content="https://hdpunks.com" />
+    <meta property="og:title" content="HD Punks" />
+    <meta property="og:description" content="Mint the HD version of any Punks you own!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://hdpunks.com/images/2484.png" />
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+    <link href="album.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://github.com/Web3Modal/web3modal/releases/download/1.9.3/index.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+
+<header>
+  <div class="navbar navbar-dark bg-black shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <!-- <strong>HD Punks</strong> -->
+        <img src="images/logo.png" height="30px">
+      </a>
+      <a href="#mint">Mint an HD Punk</a>
+      <a href="https://discord.gg/GH35EYkPrz">Discord</a>
+      <a href="https://twitter.com/hd_punks">Twitter</a>
+      <a href="https://opensea.io/assets/hd--punks?search[resultModel]=ASSETS&search[sortAscending]=false&search[sortBy]=CREATED_DATE">OpenSea</a>
+      <a href="https://etherscan.io/address/0x9490165195503fcf6a0fd20ac113223fefb66ed5">Etherscan</a>
+      <a id="connectWallet" class="btn btn-primary my-2">
+        Connect Wallet
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<main role="main">
+
+  <!-- Can't stick this inside a container because it has 15% padding on left and right -->
+  <img src="images/banner7.png" class="banner">
+
+<div class="container">
+  <div class="row justify-content-center container-info">
+    <div class="col col-lg-7 px-0">
+      <h1>What's an HD Punk?</h1>
+      HD Punks are a collection of 10,000 NFTs, one for every original CryptoPunk. They have all the same attributes,
+      but in higher fidelity - check out the rare ones for some hidden Easter eggs.
+      The individual punk images are permanently stored on IPFS, and we created a "mega-image" with all 10,000 HD Punks for fun browsing.
+      Like the original punks, the MD5 hash of the mega-image is stored within the smart contract itself.
+    </div>
+    <!-- <div class="col col-lg-4 px-0">
+      <div class="container">
+        <b>Recent Mints</b>
+        <div id="recent-mints" class="row justify-content-center recent-mints">
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+
+  <div class="row justify-content-center container-info">
+    <div class="col col-lg-7 px-0">
+      <h1>How does minting work?</h1>
+      Flat price for everyone at 0.08 Ξ. No bonding curves or other shenanigans.
+      Punk owners get first pick! In the punk presale, punk owners can mint HD versions of their punks, and their punks only.
+      After a few days, minting will be opened to the public for unclaimed HD Punks - and rare unclaimed Punks will be airdropped for free to presale minters.
+      You can view and mint your HD Punks <a href="#mint">below</a>. Make sure to connect the right MetaMask account first!
+    </div>
+    <!-- <div class="col col-lg-4 px-0">
+    </div> -->
+  </div>
+
+  <div class="row justify-content-center container-info">
+    <div class="col col-lg-7 px-0">
+      <h1>What benefits are there?</h1>
+      First, you own a beautiful piece of art 😍.
+      Second, HD Punk holders will receive goodies from our future drops, just as HD Mooncat holders received a free HD Punk.
+      Third, once public minting opens, rare unclaimed HD Punks will be airdropped
+      to early minters. You could win a zombie, ape, or even the exotic alien with an Ethereum earring.
+    </div>
+    <!-- <div class="col col-lg-4 px-0">
+      <div class="container">
+    </div> -->
+  </div>
+
+  <div class="row justify-content-center container-info">
+
+    <div id="searchCard" class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img id="searchHdPunkImage" class="punkbackground" src="#" data-toggle="modal" data-target="#myModal" onclick="swapModal(635)">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <img id="searchOgPunkImage" class="pixelated punkbackground float-left" src="" height="72px" data-toggle="modal" data-target="#myModal" onclick="swapModal(635)">
+              </div>
+              <div class="col">
+                <div class="row">
+                  <input id="searchId" type="text" value="635">
+                </div>
+                <div class="row">
+                  <button onclick="populateSearchId()">See HD Punk</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+      <div class="row">
+        <img id="modal-hd" class="punkbackground" src="images/2484.png" width="50%">
+        <img id="modal-og" class="pixelated punkbackground" src="images/punk2484.png" width="50%">
+      </div>
+
+  </div>
+</div>
+
+<div id="megaimage" class="container">
+  <div class="row justify-content-center">
+      <iframe allowfullscreen="true" src="https://www.easyzoom.com/embed/2ecd71c64bcb4714a945dc7b363e5d3a?roi=%5B43840%2C-56490%2C4%5D" width="780" height="440"></iframe>
+  </div>
+</div>
+
+<div id="mint">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <button id="mintAll" type="button" class="btn btn-primary" onclick="mintAll()" style="display:none">Mint all your HD Punks</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="mintRow" class="row"></div>
+  </div>
+</div>
+
+
+
+</main>
+
+<!-- <footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      Created with ❤️ by <a href="https://twitter.com/0xfoobar">@0xfoobar</a>
+    </p>
+    <p>Verify the contract code yourself at <a href="https://etherscan.io/address/0x9490165195503fcf6a0fd20ac113223fefb66ed5">Etherscan</a>.</p>
+  </div>
+</footer> -->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
